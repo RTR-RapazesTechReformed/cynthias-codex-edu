@@ -1,0 +1,11 @@
+services:
+  web:
+    build: .
+    command: sh -c "python manage.py migrate && python manage.py makemigrations && python manage.py collectstatic && python manage.py runserver 0.0.0.0:80"
+    volumes:
+      - .:/app
+    ports:
+      - "80:80"
+    env_file:
+      - .env
+    restart: on-failure

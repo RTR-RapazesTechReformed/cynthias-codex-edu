@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribuição / pacotes
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Arquivos de configuração do editor
+.vscode/
+.idea/
+*.swp
+
+# Arquivos de log
+*.log
+
+# Arquivos de banco de dados
+*.sqlite3
+
+# Arquivos de mídia
+media/
+
+# Arquivos estáticos
+staticfiles/
+
+# Arquivos de ambiente
+# .env
+
+# Arquivos do Docker
+*.pid
+docker-compose.override.yml
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db

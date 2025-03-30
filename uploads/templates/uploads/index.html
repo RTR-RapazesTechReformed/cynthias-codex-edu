@@ -1,0 +1,69 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Start Call to Action Section -->
+    <section class="call-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Automação para seu <strong>Negócio</strong> focado em cartas <br> Pokémon</h1>
+                    <button type="submit" class="btn btn-primary waves-effect">Entre na sua conta</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Call to Action Section -->
+
+
+
+
+    <!-- Start Contact Us Section -->
+    <section id="contact" class="contact contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title text-center wow fadeInDown" data-wow-duration="2s" data-wow-delay="50ms">
+                        <h2>Entre em contato</h2>
+                        <p>Para conhecermos melhor a sua loja</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="600ms">
+                                <div class="form-group waves-effect">
+                                    <input type="text" class="form-control" placeholder="Seu Nome *" id="name" required data-validation-required-message="Por favor digite seu nome.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group waves-effect">
+                                    <input type="email" class="form-control" placeholder="Seu Email *" id="email" required data-validation-required-message="Por favor digite seu endereço de e-mail.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group waves-effect">
+                                    <input type="tel" class="form-control" placeholder="Seu Telefone *" id="phone" required data-validation-required-message="Por favor digite seu telefone.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 wow fadeInRight" data-wow-duration="2s" data-wow-delay="600ms">
+                                <div class="form-group waves-effect">
+                                    <textarea class="form-control" placeholder="Sua Mensagem *" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-primary waves-effect">Enviar Mensagem</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+{% endblock %}
