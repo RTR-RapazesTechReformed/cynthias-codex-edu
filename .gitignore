@@ -29,7 +29,7 @@ media/
 staticfiles/
 
 # Arquivos de ambiente
-# .env
+ .env
 
 # Arquivos do Docker
 *.pid
