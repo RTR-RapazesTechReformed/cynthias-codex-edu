@@ -7,17 +7,17 @@ services:
     ports:
       - "80:80"
     environment:
-      - MYSQL_DATABASE: "cynthias_codex"
-      - MYSQL_USER: "root"
-      - MYSQL_PASSWORD: "secret"
-      - MYSQL_HOST: 10.0.1.157
-      - MYSQL_PORT: 3306
+      MYSQL_DATABASE: "cynthias_codex"
+      MYSQL_USER: "root"
+      MYSQL_PASSWORD: "secret"
+      MYSQL_HOST: 10.0.1.157
+      MYSQL_PORT: 3306
 
-      - DJANGO_SETTINGS_MODULE: CynthiasCodex.settings
+      DJANGO_SETTINGS_MODULE: CynthiasCodex.settings
 
-      - AWS_ACCESS_KEY_ID: "ASIAUWEMPCBHHLWHRHCF"
-      - AWS_SECRET_ACCESS_KEY: "xxTrjrro1QcKue0ALZBTf0xEzudXIjocZaBVy8uW"
-      - AWS_BUCKET_NAME: "s3-edu-licao"
-      - AWS_REGION: "us-east-1"
-      - AWS_STORAGE_BUCKET_NAME: "s3-edu-licao"
+      AWS_ACCESS_KEY_ID: "ASIAUWEMPCBHHLWHRHCF"
+      AWS_SECRET_ACCESS_KEY: "xxTrjrro1QcKue0ALZBTf0xEzudXIjocZaBVy8uW"
+      AWS_BUCKET_NAME: "s3-edu-licao"
+      AWS_REGION: "us-east-1"
+      AWS_STORAGE_BUCKET_NAME: "s3-edu-licao"
     restart: on-failure
