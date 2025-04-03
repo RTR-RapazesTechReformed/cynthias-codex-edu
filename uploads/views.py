@@ -9,7 +9,7 @@ import json
 
 # Create your views here.
 
-s3_client = boto3.client('s3', region_name=settings.AWS_S3_REGION_NAME)
+s3_client = boto3.client('s3' aws_access_key_id="ASIAUWEMPCBHHLWHRHCF", aws_secret_access_key="xxTrjrro1QcKue0ALZBTf0xEzudXIjocZaBVy8uW", region_name="us-east-1")
 
 
 def index(request):
