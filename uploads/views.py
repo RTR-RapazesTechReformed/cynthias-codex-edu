@@ -29,6 +29,6 @@ def upload_file(request):
             UploadLog.objects.create(filename=file.name, uploaded_by=request.user.username)
             return JsonResponse({'message': 'Upload bem-sucedido', 'filename': file.name})
         except s3_client.exceptions.ClientError as e:
-            return JsonResponse({'message': 'Erro ao verificar o upload no S3', 'error': str(e)}, status=500)
+            return JsonResponse({'message': f'Erro ao verificar o upload no S3 error: {str(e)}', 'error': str(e)}, status=500)
 
     return render(request, 'uploads/upload.html')
