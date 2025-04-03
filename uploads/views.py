@@ -9,10 +9,7 @@ import json
 
 # Create your views here.
 
-s3_client = boto3.client('s3',
-                          aws_access_key_id=settings.AWS_ACCESS_KEY_ID,
-                          aws_secret_access_key=settings.AWS_SECRET_ACCESS_KEY,
-                          region_name=settings.AWS_S3_REGION_NAME)
+s3_client = boto3.client('s3', region_name=settings.AWS_S3_REGION_NAME)
 
 
 def index(request):
@@ -23,10 +20,11 @@ def index(request):
 def upload_file(request):
     if request.method == 'POST' and request.FILES.get('file'):
         file = request.FILES.get('file')
-        s3_client.upload_fileobj(file, settings.AWS_STORAGE_BUCKET_NAME, file.name)
+        
 
         # Verifica se o arquivo foi enviado com sucesso
         try:
+            s3_client.upload_fileobj(file, settings.AWS_STORAGE_BUCKET_NAME, file.name)
             s3_client.head_object(Bucket=settings.AWS_STORAGE_BUCKET_NAME, Key=file.name)
             UploadLog.objects.create(filename=file.name, uploaded_by=request.user.username)
             return JsonResponse({'message': 'Upload bem-sucedido', 'filename': file.name})
