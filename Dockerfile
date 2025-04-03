@@ -26,5 +26,4 @@ ENV DJANGO_SETTINGS_MODULE=CynthiasCodex.settings
 EXPOSE 80
 
 # Comando para rodar as migrações e iniciar o servidor
-CMD ["sh", "-c", "python manage.py migrate && python manage.py makemigrations && python manage.py collectstatic --no-input
-&& python manage.py runserver 0.0.0.0:80"]
+CMD ["sh", "-c", "python manage.py migrate && python manage.py makemigrations && python manage.py collectstatic --no-input && python manage.py runserver 0.0.0.0:80"]
