@@ -24,7 +24,6 @@ def upload_file(request):
     if request.method == 'POST' and request.FILES.get('file'):
         file = request.FILES.get('file')
         s3_client.upload_fileobj(file, settings.AWS_STORAGE_BUCKET_NAME, file.name)
-        s3_client.upload_fileobj(file, settings.AWS_STORAGE_BUCKET_NAME, file.name)
 
         # Verifica se o arquivo foi enviado com sucesso
         try:
