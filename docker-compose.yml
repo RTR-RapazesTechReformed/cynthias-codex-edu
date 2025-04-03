@@ -9,8 +9,8 @@ services:
     environment:
       MYSQL_DATABASE: "cynthias_codex"
       MYSQL_USER: "root"
-      MYSQL_PASSWORD: "secret"
-      MYSQL_HOST: "10.0.1.68"
+      MYSQL_PASSWORD: "verysecret"
+      MYSQL_HOST: 10.0.1.68
       MYSQL_PORT: 3306
 
       DJANGO_SETTINGS_MODULE: CynthiasCodex.settings
