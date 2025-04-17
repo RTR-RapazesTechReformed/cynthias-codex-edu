@@ -199,3 +199,17 @@ JAZZMIN_SETTINGS = {
     },
     "site_icon": "/assets/images/theme/logo_login.png",
 }
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'DEBUG',
+    },
+}
