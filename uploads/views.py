@@ -29,9 +29,9 @@ def upload_file(request):
         
         # Verifica se o arquivo foi enviado com sucesso
         try:
-            s3_client.upload_file(file, settings.AWS_STORAGE_BUCKET_NAME, "teste.csv") # TODO
-            s3_client.head_object(Bucket=settings.AWS_STORAGE_BUCKET_NAME, Key="teste.csv")
-            UploadLog.objects.create(filename="teste.csv", uploaded_by=request.user.username)
+            s3_client.upload_file(file, settings.AWS_STORAGE_BUCKET_NAME, file.name) # TODO
+            s3_client.head_object(Bucket=settings.AWS_STORAGE_BUCKET_NAME, Key=file.name)
+            UploadLog.objects.create(filename=file.name, uploaded_by=request.user.username)
             return JsonResponse({'message': 'Upload bem-sucedido', 'filename': file.name})
         except s3_client.exceptions.ClientError as e:
             return JsonResponse({'message': f'Erro ao verificar o upload no S3 error: {str(e)}', 'error': str(e)}, status=500)
