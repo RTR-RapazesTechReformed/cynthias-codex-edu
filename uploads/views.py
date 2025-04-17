@@ -29,7 +29,7 @@ def upload_file(request):
         
         # Verifica se o arquivo foi enviado com sucesso
         try:
-            s3_client.upload_file(file, settings.AWS_STORAGE_BUCKET_NAME, file.name) # TODO
+            s3_client.upload_fileobj(file, settings.AWS_STORAGE_BUCKET_NAME, file.name) # TODO
             s3_client.head_object(Bucket=settings.AWS_STORAGE_BUCKET_NAME, Key=file.name)
             UploadLog.objects.create(filename=file.name, uploaded_by=request.user.username)
             return JsonResponse({'message': 'Upload bem-sucedido', 'filename': file.name})
