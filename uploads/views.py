@@ -21,8 +21,8 @@ def upload_file(request):
     if request.method == 'POST' and request.FILES.get('file'):
         file = request.FILES.get('file')
 
-        console.log(file)
-        console.log(file.name)
+        print(file)
+        print(file.name)
 
         # Verifica se o arquivo foi enviado com sucesso
         try:
