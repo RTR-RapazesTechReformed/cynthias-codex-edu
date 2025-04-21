@@ -96,7 +96,7 @@ DATABASES = {
         'NAME': os.getenv('MYSQL_DATABASE', 'cynthias_codex'),
         'USER': os.getenv('MYSQL_USER', 'root'),
         'PASSWORD': os.getenv('MYSQL_PASSWORD', 'verysecret'),
-        'HOST':  '10.0.1.214',
+        'HOST':  os.getenv('MYSQL_HOST'),
         'PORT': os.getenv('MYSQL_PORT', '3306'),
     }
 }
