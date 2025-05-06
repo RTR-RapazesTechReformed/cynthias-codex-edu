@@ -10,11 +10,11 @@ services:
       MYSQL_DATABASE: "cynthias_codex"
       MYSQL_USER: "root"
       MYSQL_PASSWORD: "verysecret"
-      MYSQL_HOST: "10.0.1.31"
+      MYSQL_HOST: "10.0.1.85"
       MYSQL_PORT: 3306
 
       DJANGO_SETTINGS_MODULE: CynthiasCodex.settings
 
-      AWS_BUCKET_NAME: "bronze-bucket-8"
+      AWS_BUCKET_NAME: "s3-raw-lab-03231031"
       AWS_REGION: "us-east-1"
     restart: on-failure
